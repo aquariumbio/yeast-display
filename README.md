@@ -10,4 +10,4 @@ A workflow for doing several types of yeast display experiments using Aquairum. 
 [Menagerie](https://github.com/klavinslab/menagerie) was originally developed for [automated planning](https://github.com/klavinslab/menagerie#plan-a-protein-stability-experiment) of this workflow.
 
 ## Typical workflow
-![The first round of a simple yeast display experiment](/docs/_images/yeast-display-example.png?raw=true "Yeast Display Plan")
+<img src="/docs/_images/yeast-display-example.png" alt="Yeast Display Plan" width="400"/>
