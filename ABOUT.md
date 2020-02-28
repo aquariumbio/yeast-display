@@ -4,6 +4,8 @@ A workflow for doing several types of yeast display experiments with Aquarium [[
 
 &copy; University of Washington
 
+### Keywords
+Aquarium, Protocol, Yeast Surface Display, FACS, Protein Stability
 
 ### Maintainer
 - Devin Strickland, <dvn.strcklnd@gmail.com>
