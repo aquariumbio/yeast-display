@@ -1,6 +1,6 @@
 # Challenge and Label
 
-This is a detailed description of how to use this protocol in experiments. API documentation can be found [here](https://github.com/dvnstrcklnd/aq-yeast-display/blob/master/operation_types/Challenge_and_Label.md)
+This is a detailed description of how to use this protocol in experiments. API documentation can be found [here](https://github.com/aquariumbio/yeast-display/blob/master/operation_types/Challenge_and_Label.md)
 
 ## Optional Parameters
 Optional parameters can be supplied to Challenge and Label Jobs by adding a Data Association with key `options` to the Plan.
