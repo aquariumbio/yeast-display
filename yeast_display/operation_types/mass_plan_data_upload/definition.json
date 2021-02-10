@@ -1,0 +1,9 @@
+{
+  "name": "Mass Plan Data Upload",
+  "parent_class": "OperationType",
+  "category": "Yeast Display",
+  "inputs": [],
+  "outputs": [],
+  "on_the_fly": false,
+  "user_id": 223
+}

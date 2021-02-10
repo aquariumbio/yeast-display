@@ -1,0 +1,19 @@
+{
+  "name": "800 mL Liquid",
+  "description": "800 mL Bottle",
+  "min": 0,
+  "max": 10000,
+  "handler": "sample_container",
+  "safety": "No safety information",
+  "clean up": "No cleanup information",
+  "data": " {\r\n    \"samples\": [\r\n      { \"name\": \"SC\",   \"materials\": 0.0135, \"labor\": 0.028, \"delete\": false, \"unit\": \"mL\", \"total_volume\": 800 },\r\n      { \"name\": \"SDO\",  \"materials\": 0.014, \"labor\": 0.028, \"delete\": false, \"unit\": \"mL\", \"total_volume\": 800 },\r\n      { \"name\": \"50% Glycerol\",   \"materials\": 0.02, \"labor\": 0.02, \"delete\": false, \"unit\": \"mL\", \"total_volume\": 800 },\r\n      { \"name\": \"TB\",   \"materials\": 0.01, \"labor\": 0.016, \"delete\": false, \"unit\": \"mL\", \"total_volume\": 800 },\r\n      { \"name\": \"TB + Amp\",   \"materials\": 0.03, \"labor\": 0.028, \"delete\": false, \"unit\": \"mL\", \"total_volume\": 800 },\r\n      { \"name\": \"LB\",   \"materials\": 0.01, \"labor\": 0.016, \"delete\": false, \"unit\": \"mL\", \"total_volume\": 800 },     \r\n      { \"name\": \"YPAD\", \"materials\": 0.01, \"labor\": 0.025, \"delete\": false, \"unit\": \"mL\", \"total_volume\": 800 }\r\n    ]\r\n  }",
+  "vendor": "No vendor information",
+  "unit": "Media",
+  "cost": 0.01,
+  "release method": "return",
+  "release description": "",
+  "image": "",
+  "prefix": "",
+  "rows": null,
+  "columns": null
+}

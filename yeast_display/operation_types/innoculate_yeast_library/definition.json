@@ -1,0 +1,35 @@
+{
+  "name": "Innoculate Yeast Library",
+  "parent_class": "OperationType",
+  "category": "Yeast Display",
+  "inputs": [
+    {
+      "name": "Yeast Culture",
+      "part": null,
+      "array": null,
+      "routing": "YL"
+    },
+    {
+      "name": "Media",
+      "part": null,
+      "array": null,
+      "routing": "M"
+    },
+    {
+      "name": "Options",
+      "part": null,
+      "array": null,
+      "routing": null
+    }
+  ],
+  "outputs": [
+    {
+      "name": "Yeast Culture",
+      "part": null,
+      "array": null,
+      "routing": "YL"
+    }
+  ],
+  "on_the_fly": null,
+  "user_id": 211
+}

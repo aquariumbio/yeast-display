@@ -1,0 +1,29 @@
+{
+  "name": "Dilute Yeast Library",
+  "parent_class": "OperationType",
+  "category": "Yeast Display",
+  "inputs": [
+    {
+      "name": "Yeast Culture",
+      "part": null,
+      "array": null,
+      "routing": "YL"
+    },
+    {
+      "name": "Media",
+      "part": null,
+      "array": null,
+      "routing": "M"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "Yeast Culture",
+      "part": null,
+      "array": null,
+      "routing": "YL"
+    }
+  ],
+  "on_the_fly": null,
+  "user_id": 228
+}

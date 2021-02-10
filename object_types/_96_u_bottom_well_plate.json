@@ -1,0 +1,19 @@
+{
+  "name": "96 U-bottom Well Plate",
+  "description": "96 U bottom well for cytometer readings",
+  "min": 0,
+  "max": 10000,
+  "handler": "collection",
+  "safety": "No safety information",
+  "clean up": "No cleanup information",
+  "data": "{\"working_vol\": \"300_uL\", \"max_vol\": \"0.3_mL\" }",
+  "vendor": "No vendor information",
+  "unit": "plate",
+  "cost": 1.0,
+  "release method": "return",
+  "release description": "",
+  "image": "",
+  "prefix": "",
+  "rows": 8,
+  "columns": 12
+}

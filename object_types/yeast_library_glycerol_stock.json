@@ -1,0 +1,19 @@
+{
+  "name": "Yeast Library Glycerol Stock",
+  "description": "A special case of glycerol stock that contains a strain library.",
+  "min": 0,
+  "max": 1,
+  "handler": "sample_container",
+  "safety": "No safety information",
+  "clean up": "No cleanup information",
+  "data": "No data",
+  "vendor": "No vendor information",
+  "unit": "DNA Library",
+  "cost": 0.01,
+  "release method": "dispose",
+  "release description": "",
+  "image": "",
+  "prefix": "M80",
+  "rows": null,
+  "columns": null
+}

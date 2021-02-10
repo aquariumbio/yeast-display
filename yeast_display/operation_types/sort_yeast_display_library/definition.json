@@ -1,0 +1,35 @@
+{
+  "name": "Sort Yeast Display Library",
+  "parent_class": "OperationType",
+  "category": "Yeast Display",
+  "inputs": [
+    {
+      "name": "Labeled Yeast Library",
+      "part": null,
+      "array": null,
+      "routing": "YL"
+    },
+    {
+      "name": "Control?",
+      "part": null,
+      "array": null,
+      "routing": null
+    },
+    {
+      "name": "Sort?",
+      "part": null,
+      "array": null,
+      "routing": null
+    }
+  ],
+  "outputs": [
+    {
+      "name": "Labeled Yeast Library",
+      "part": null,
+      "array": null,
+      "routing": "YL"
+    }
+  ],
+  "on_the_fly": null,
+  "user_id": 209
+}
