@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-needs 'Yeast Display/YeastDisplayShows'
 needs 'Yeast Display/YeastDisplayHelper'
 
 # Inoculate Yeast Library Protocol
@@ -8,13 +7,8 @@ needs 'Yeast Display/YeastDisplayHelper'
 # @author Devin Strickland <strcklnd@uw.edu>
 class Protocol
   include YeastDisplayHelper
-  include YeastDisplayShows
-
-  INPUT_YEAST = 'Yeast Culture'
 
   def main
-    set_test_labels(operations.map { |op| op.input(INPUT_YEAST).item }) if debug
-
     operations.retrieve.make
 
     group_ops_by_container.each do |container, container_group|
