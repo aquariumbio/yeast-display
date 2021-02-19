@@ -164,6 +164,19 @@ class Protocol
     end
   end
 
+  def label_tubes_with_concentrations
+    show do
+      title 'Label Tubes With Concentrations'
+
+      note 'Label the tubes with the intended treatment concentrations ' \
+        'according to the table'
+      table operations.start_table
+              .custom_column(heading: "Label") { |op| sample_tube_label(op, OUTPUT_YEAST) }
+              .custom_column(heading: "Concentration") { |op| protease_conc(op) }
+              .end_table
+    end
+  end
+
   ########## DISPLAY METHODS WITH DEDICATED MODULES ##########
 
   # Retrieve the cultures, measure the ODs, centrifuge and resuspend in the appropriate volume.
@@ -180,6 +193,8 @@ class Protocol
       od_ml_needed: @plan_params[:od_ml_needed],
       debug: debug && MY_DEBUG
     )
+
+    label_tubes_with_concentrations
 
     uc_items = unique_culture_operations.map { |op| op.input(INPUT_YEAST).item }
 
