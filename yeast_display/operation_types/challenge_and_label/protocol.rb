@@ -65,11 +65,22 @@ class Protocol
     # Setup that runs in the background
     # These methods should only call show blocks in debug mode
 
+    # in_afts = operations.first.operation_type.input('Yeast Culture').allowable_field_types
+    # out_afts = operations.first.operation_type.output('Labeled Yeast Library').allowable_field_types
+    # in_afts.each { |i| inspect i.sample_type_id, i.id }
+    # out_afts.each { |i| inspect i.sample_type_id, i.id }
+
+    # inspect operations.first.input('Yeast Culture')
+    # inspect operations.first.output('Labeled Yeast Library')
+    # return {}
+
     override_input_operations if debug && MY_DEBUG
 
     @plan_params = default_plan_params
 
     update_plan_params
+
+    inspect_setup(operations: operations) if debug && MY_DEBUG
 
     calculate_volumes
 
@@ -343,7 +354,7 @@ class Protocol
     concs = ops.map { |op| op.input(PROTEASE).item.get(:units_per_milliliter) }.uniq
     raise 'Protease activity error.' unless concs.length == 1
 
-    concs.first.to_i
+    concs.first.to_f
   end
 
   def protease_ops(protease)
@@ -372,5 +383,9 @@ class Protocol
     end
 
     # check_labels if debug
+  end
+
+  def inspect_setup(operations:)
+    inspect operations.first.input(PROTEASE).item.get(:units_per_milliliter), 'stock concentration'
   end
 end
