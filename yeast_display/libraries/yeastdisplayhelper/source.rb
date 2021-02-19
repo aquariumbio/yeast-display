@@ -19,8 +19,8 @@ module YeastDisplayHelper
   REMOVE_BUFFER = 'Aspirate off the buffer without disturbing the cell pellet.'
   LABEL_TUBES_FROM_TABLE = 'Label the tubes and add the reagent volumes as indicated'
 
-  ROOM_TEMP = { style: 'bg-color: lightorange', temp: 'AT ROOM TEMPERATURE' }.freeze
-  ON_ICE = { style: 'bg-color: powderblue', temp: 'ON ICE' }.freeze
+  ROOM_TEMP = { style: 'background-color: palegoldenrod', temp: 'AT ROOM TEMPERATURE' }.freeze
+  ON_ICE = { style: 'background-color: powderblue', temp: 'ON ICE' }.freeze
 
   INCUBATOR = '30 °C shaker incubator'
 
@@ -61,6 +61,12 @@ module YeastDisplayHelper
 
   def materials_prep_temp(substitutions)
     '<span style="%{style}">These materials should be placed <b>%{temp}</b></span>' % substitutions
+  end
+
+  def incubate_in_dark
+    '<span style="background-color: black; color: white">' \
+    '&#127769; KEEP ALL TUBES <b>IN THE DARK</b> DURING INCUBATION' \
+    '</span>'
   end
 
   def set_unique_items(handle)

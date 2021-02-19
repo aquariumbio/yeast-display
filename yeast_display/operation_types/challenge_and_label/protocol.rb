@@ -55,7 +55,8 @@ class Protocol
       incubate_with_antibody: true,           # Skips incubation AND washes if false
       pretreatment_item_id: nil,
       pretreatment_incubation_time_minutes: nil,
-      pretreatment_dilution_factor: nil
+      pretreatment_dilution_factor: nil,
+      incubate_in_dark: true
     }
   end
 
@@ -218,7 +219,9 @@ class Protocol
       vortex_interval: @plan_params[:vortex_interval_qty],
       quench_vol: @plan_params[:quench_qty],
       buffer_handle: QUENCH_BUFFER,
-      quench_protease: @plan_params[:quench_protease]
+      quench_protease: @plan_params[:quench_protease],
+      incubate_in_dark: @plan_params[:incubate_in_dark],
+      temp: ROOM_TEMP
     )
   end
 
@@ -245,7 +248,8 @@ class Protocol
     )
 
     incubate_with_antibody(
-      antibody_qty: @plan_params[:antibody_qty]
+      antibody_qty: @plan_params[:antibody_qty],
+      incubate_in_dark: @plan_params[:incubate_in_dark]
     )
   end
 
