@@ -16,8 +16,7 @@ class Protocol
     end
     return_to_incubator
 
-    operations.each { |op| op.input(INPUT_YEAST).item.mark_as_deleted }
-    discard_deleted_inputs(operations: operations)
+    mark_cultures_for_discard(operations.map { |op| op.input(INPUT_YEAST).item })
 
     operations.store
     transfer_bin_numbers(operations: operations)
