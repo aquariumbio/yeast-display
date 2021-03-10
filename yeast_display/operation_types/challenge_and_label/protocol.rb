@@ -81,9 +81,13 @@ class Protocol
 
     update_plan_params
 
-    inspect_setup(operations: operations) if debug && MY_DEBUG
-
     calculate_volumes
+
+    validate(
+      operations: operations,
+      plan_params: @plan_params
+    )
+    return {} if operations.errored.any?
 
     sort_operations
 
@@ -171,9 +175,10 @@ class Protocol
       note 'Label the tubes with the intended treatment concentrations ' \
         'according to the table'
       table operations.start_table
-              .custom_column(heading: "Label") { |op| sample_tube_label(op, OUTPUT_YEAST) }
-              .custom_column(heading: "Concentration") { |op| protease_conc(op) }
-              .end_table
+                      .custom_column(heading: 'Label') { |op| sample_tube_label(op, OUTPUT_YEAST) }
+                      .custom_column(heading: 'Protease') { |op| protease_name(op) }
+                      .custom_column(heading: 'Concentration') { |op| protease_conc(op) }
+                      .end_table
     end
   end
 
@@ -327,6 +332,18 @@ class Protocol
     @plan_params[:antibody_buffer_per_rxn][:qty] *= @plan_params[:make_extra_reagent]
 
     @plan_params
+  end
+
+  def validate(operations:, plan_params:)
+    if plan_params[:quench_protease]
+      operations.each do |op|
+        unless op.input(QUENCH_BUFFER)
+          msg = "Plan calls for quencing but #{QUENCH_BUFFER} not found."
+          op.error(:input_error, msg)
+        end
+      end
+    end
+    report_errors(abort_job: true)
   end
 
   # Loops over the operations and calls a method to find and add buffers.
