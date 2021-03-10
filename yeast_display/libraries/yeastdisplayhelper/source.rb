@@ -5,6 +5,7 @@ needs 'Standard Libs/Units'
 needs 'Standard Libs/TemporaryTubeLabels'
 needs 'Yeast Display/YeastDisplayShows'
 needs 'Standard Libs/ItemActions'
+needs 'Standard Libs/OperationErrors'
 
 module YeastDisplayHelper
   include TemporaryTubeLabels
@@ -12,6 +13,7 @@ module YeastDisplayHelper
   include CommonInputOutputNames
   include YeastDisplayShows
   include ItemActions
+  include OperationErrors
 
   ADD_WASH_BUFFER = 'Add %{qty} %{units} of chilled quench buffer to each tube according to the table.'
   VORTEX_CELLS = 'After adding buffer, vortex each tube for 3 pulses.'
